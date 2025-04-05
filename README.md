@@ -1,67 +1,128 @@
-# SafeTransact-CreditCardFraudDetection
+# 💳 Credit Card Fraud Detection using Machine Learning
 
-## ABSTRACT
-Credit card fraud is a significant issue, causing billions of dollars in losses annually. Machine learning offers an efficient way to detect fraudulent transactions by recognizing patterns indicative of fraud. This project develops and evaluates multiple machine learning models to identify fraudulent credit card transactions. By comparing model performances, the most effective algorithm is selected for accurate fraud detection.
-
-**Keywords:** Credit Card Fraud Detection, Fraud Detection, Fraudulent Transactions, K-Nearest Neighbors, Support Vector Machine, Logistic Regression, Decision Tree.
+A comprehensive machine learning solution to identify fraudulent credit card transactions — helping financial institutions mitigate losses and enhance customer trust.
 
 ---
 
-## Overview
-With the rise in credit card usage, ensuring transaction security has become crucial. Reports of credit card fraud have surged significantly, making fraud detection a priority. This project applies various machine learning techniques to detect fraudulent activities. By analyzing large datasets and applying algorithms like K-Nearest Neighbors (KNN), Logistic Regression (LR), Support Vector Machine (SVM), and Decision Tree (DT), the goal is to identify the most accurate fraud detection model.
+## 🌐 Problem Statement
+
+With over **$30 billion lost annually** due to credit card fraud, it's critical for financial institutions to adopt intelligent, data-driven fraud detection systems. This project aims to build and evaluate machine learning models that can effectively detect fraudulent credit card transactions from highly imbalanced datasets.
 
 ---
 
-## Project Goals
-- Detect fraudulent credit card transactions.
-- Apply multiple machine learning algorithms for fraud detection.
-- Compare model performance to identify the best algorithm.
-- Enhance fraud detection accuracy to protect consumers.
+## 📊 Dataset
+
+- **Source**: [Kaggle - Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+- **Total Records**: 284,808
+- **Fraudulent Cases**: 492 (~0.172%)
+- **Features**: 31
+  - 28 anonymized via PCA
+  - 1 `Time`, 1 `Amount`, 1 `Class` (target)
 
 ---
 
-## Data Source
-- **Dataset**: The dataset used in this project was sourced from [Kaggle](https://www.kaggle.com/datasets](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)).
-- **Description**: Contains anonymized credit card transactions from European cardholders over two days.
-- **Features**: 31 attributes, including PCA-transformed components, time, amount, and a class label (0: Normal, 1: Fraudulent).
+## 🎯 Objectives
+
+- Train ML models to classify transactions as **fraudulent or legitimate**
+- Handle class imbalance effectively
+- Compare multiple algorithms
+- Evaluate model performance using **classification metrics**
+- Visualize fraud patterns and insights
 
 ---
 
-## Algorithms Used
-- **K-Nearest Neighbors (KNN)**
-- **Logistic Regression (LR)**
-- **Support Vector Machine (SVM)**
-- **Decision Tree (DT)**
+## 🧠 Algorithms Used
+
+| Model                | Train Accuracy | Test Accuracy |
+|---------------------|----------------|---------------|
+| K-Nearest Neighbors (K=3 & 7) | 100%          | 100%         |
+| Decision Tree        | 100%          | 100%         |
+| Support Vector Machine | 97.59%        | ~97%         |
+| Logistic Regression  | 93.51%        | 91.88%       |
 
 ---
 
-## Future Work
-- Experiment with additional datasets for broader applicability.
-- Apply different data splitting ratios.
-- Integrate geolocation data from telecom sources to improve fraud detection accuracy.
-- Enhance model interpretability with explainable AI (XAI) techniques.
+## 🧪 Model Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- ROC AUC
+- Confusion Matrix
+
+> **Note:** Precision and Recall were prioritized due to the high cost of false negatives in fraud detection.
 
 ---
 
-## Conclusion
-The project successfully developed and evaluated multiple machine learning models for credit card fraud detection. KNN and Decision Tree models achieved the highest accuracy of 100%, making them the most effective in identifying fraudulent transactions. Implementing these models in real-world systems can minimize fraud losses and enhance customer security.
+## 🧰 Tech Stack & Libraries
 
-
----
-
-## License
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## Acknowledgements
-- Special thanks to Kaggle for providing the dataset.
-- Various online resources and research papers referenced for model development.
-
-For further details, check the documentation or contact the developer.
+- **Languages**: Python
+- **Tools**: Jupyter Notebook
+- **Libraries**:
+  - Data Processing: `pandas`, `numpy`
+  - Visualization: `matplotlib`, `seaborn`
+  - Machine Learning: `scikit-learn`
+  - Class Balancing: `imbalanced-learn` (SMOTE)
+  - Model Persistence: `joblib`
 
 ---
 
-## Contact
-- **Name**: Mayank Panwar
-- **Email**: mayankpanwar5943@example.com
+## 📉 Class Imbalance Handling
+
+- **SMOTE (Synthetic Minority Over-sampling Technique)** was used to generate synthetic examples of the minority class, significantly improving the model's ability to detect fraud without overfitting.
+
+---
+
+## 📈 Visualizations & Insights
+
+- Fraud vs Non-Fraud distribution
+- Correlation heatmap of features
+- Amount and time-based fraud trends
+- Confusion matrices for all models
+
+> 📷 *Include screenshots here if uploading to GitHub for visual appeal.*
+
+---
+
+## 📌 Potential Real-World Applications
+
+- Real-time fraud alert systems in banks and fintech apps
+- Integration into mobile banking APIs
+- Rule-based + ML hybrid decision engines
+- Scalable backend microservices for fraud scoring
+
+---
+
+## 🔮 Future Enhancements
+
+- Deploy model as a REST API using Flask or FastAPI
+- Create a live web app using Streamlit or Dash
+- Use deep learning models (Autoencoders, LSTM)
+- Incorporate additional metadata (location, device, etc.)
+- Model interpretability using SHAP or LIME
+
+---
+
+## 📄 License
+
+This project is open-sourced under the MIT License.
+
+---
+
+## 🙌 Acknowledgements
+
+- ULB Machine Learning Group (for dataset)
+- Kaggle and Scikit-learn Community
+
+---
+
+## 🔗 Connect with Me
+
+- [LinkedIn](https://www.linkedin.com/in/panwar-mayank)
+- [Portfolio Website](https://panwar-mayank.streamlit.app)
+- [Email](mailto:mayank.panwar.ug22@nsut.ac.in)
+- [Email](mailto:mayankpanwar5943@gmail.com)
+
+---
+
