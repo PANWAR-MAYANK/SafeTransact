@@ -81,8 +81,6 @@ With over **$30 billion lost annually** due to credit card fraud, it's critical 
 - Amount and time-based fraud trends
 - Confusion matrices for all models
 
-> 📷 *Include screenshots here if uploading to GitHub for visual appeal.*
-
 ---
 
 ## 📌 Potential Real-World Applications
